@@ -1,0 +1,1770 @@
+/**********************
+   icons
+***********************/
+
+a {
+    .icon {
+        &:before {
+            color: $white;
+        }
+
+        &:hover,
+        &:focus {
+            .icon {
+                &.stroke {
+                    border-color: $white;
+                }
+            }
+        }
+
+        &:active,
+        &.active {
+            .icon {
+                &.stroke {
+                    border-color: $white;
+                    background-color: $white;
+
+                    &:before {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//******************************
+//  <a> BREAKPOINT
+//******************************
+@include breakpoint(tablet) {
+    a[href^="tel"] {
+        &:hover,
+        &:focus {
+            .icon {
+                &.stroke {
+                    border-color: $white;
+                }
+            }
+        }
+
+        &:hover {
+            .icon {
+                &:active {
+                    border-color: $white;
+                }
+            }
+        }
+
+        &:active {
+            .icon {
+                &.stroke {
+                    background-color: transparent;
+
+                    &:before {
+                        color: $white;
+                    }
+                }
+
+                &:active {
+                    background-color: $white;
+
+                    &:before {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .icon {
+            &:before {
+                color: $white;
+            }
+
+            &.active {
+                &:before {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+/*
+  icons begin
+*/
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+
+    &:before {
+        color: $white;
+        line-height: 24px;
+        font-family: $font-icon;
+        font-size: 23px;
+        font-weight: normal;
+        font-style: normal;
+        font-variant: normal;
+        text-align: center;
+        text-transform: none;
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow: hidden;
+        vertical-align: text-bottom;
+    }
+
+    &.stroke {
+        padding: 8px 10px;
+        border-width: 2px;
+        @include border-radius(22px);
+    }
+
+    &.fill {
+        background-color: $white;
+
+        &:before {
+            color: $white;
+        }
+
+        &.stroke {
+            border-color: $white;
+        }
+
+        &.dark {
+            background-color: #3c3c3c;
+
+            &.stroke {
+                border-color: #3c3c3c;
+            }
+        }
+    }
+
+    &.active {
+        background-color: $white;
+
+        &:before {
+            color: $white;
+        }
+
+        &.stroke {
+            border-color: $white;
+        }
+    }
+
+    &.large {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+
+        &:before {
+            line-height: 40px;
+            font-size: 40px;
+        }
+
+        &.stroke {
+            color: $white;
+            margin-top: -8px;
+            margin-right: 12px;
+            padding: 3px; /* 9px changed Aug 2, 2016 */
+            border-width: 2px;
+            @include border-radius(50px);
+        }
+    }
+
+
+
+    &.x3 {
+        &:before {
+            content: "\e905";
+        }
+    }
+
+    &.planshare {
+        &:before {
+            content: "\e903";
+        }
+    }
+
+    &.transfer {
+        &:before {
+            content: "\e904";
+        }
+    }
+
+    &.gear {
+        &:before {
+            content: "\e901";
+        }
+    }
+
+    &.touchscreen {
+        &:before {
+            content: "\e902";
+        }
+    }
+
+    &.truck {
+        &:before {
+            content: "\e900";
+        }
+    }
+
+    &.biz-loan {
+        &:before {
+            content: "\e801";
+        }
+    }
+
+    &.cheque {
+        &:before {
+            content: "\e802";
+        }
+    }
+
+    &.cheque-discount {
+        &:before {
+            content: "\e803";
+        }
+    }
+
+    &.cheque-rewards {
+        &:before {
+            content: "\e804";
+        }
+    }
+
+    &.concierge {
+        &:before {
+            content: "\e805";
+        }
+    }
+
+    &.creditcard-savings {
+        &:before {
+            content: "\e806";
+        }
+    }
+
+    &.gov-loan {
+        &:before {
+            content: "\e807";
+        }
+    }
+
+    &.home-loc {
+        &:before {
+            content: "\e808";
+        }
+    }
+
+    &.id-protection {
+        &:before {
+            content: "\e809";
+        }
+    }
+
+    &.merchant-loan {
+        &:before {
+            content: "\e800";
+        }
+    }
+
+    &.merchant-loc {
+        &:before {
+            content: "\e80f";
+        }
+    }
+
+    &.overdraft-loc {
+        &:before {
+            content: "\e810";
+        }
+    }
+
+    &.schedule-cheque {
+        &:before {
+            content: "\e811";
+        }
+    }
+
+    &.fiftyfive {
+        &:before {
+            content: "\e80a";
+        }
+    }
+
+    &.time-long {
+        &:before {
+            content: "\e6d2";
+        }
+    }
+
+    &.time-medium {
+        &:before {
+            content: "\e6d3";
+        }
+    }
+
+    &.time-short {
+        &:before {
+            content: "\e6d4";
+        }
+    }
+
+    &.wheelchair {
+        &:before {
+            content: "\e6d5";
+        }
+    }
+
+    &.personal-loc {
+        &:before {
+            content: "\e6cf";
+        }
+    }
+
+    &.ra-rrsploan {
+        &:before {
+            content: "\e6d0";
+        }
+    }
+
+    &.rrsp-readiline {
+        &:before {
+            content: "\e6d1";
+        }
+    }
+
+    &.agri-readiline-loc {
+        &:before {
+            content: "\e6bd";
+        }
+    }
+
+    &.commercial-loans-insurance {
+        &:before {
+            content: "\e6be";
+        }
+    }
+
+    &.commercial-mortgage {
+        &:before {
+            content: "\e6bf";
+        }
+    }
+
+    &.compare-loan-option {
+        &:before {
+            content: "\e6c0";
+        }
+    }
+
+    &.compare-value {
+        &:before {
+            content: "\e6c1";
+        }
+    }
+
+    &.farm-equip-readiline {
+        &:before {
+            content: "\e6c2";
+        }
+    }
+
+    &.farm-mortgage {
+        &:before {
+            content: "\e6c3";
+        }
+    }
+
+    &.fixedrate-termloan {
+        &:before {
+            content: "\e6c4";
+        }
+    }
+
+    &.great-value {
+        &:before {
+            content: "\e6c5";
+        }
+    }
+
+    &.ilp {
+        &:before {
+            content: "\e6c6";
+        }
+    }
+
+    &.operating-loc {
+        &:before {
+            content: "\e6c7";
+        }
+    }
+
+    &.priceless-possibilities {
+        &:before {
+            content: "\e6c8";
+        }
+    }
+
+    &.sky-is-the-limit {
+        &:before {
+            content: "\e6c9";
+        }
+    }
+
+    &.sbusi-instalment-loan {
+        &:before {
+            content: "\e6ca";
+        }
+    }
+
+    &.sbusi-loc {
+        &:before {
+            content: "\e6cb";
+        }
+    }
+
+    &.us-loc-fromhb {
+        &:before {
+            content: "\e6cc";
+        }
+    }
+
+    &.variablerate-tloan {
+        &:before {
+            content: "\e6cd";
+        }
+    }
+
+    &.what-v-caniafford {
+        &:before {
+            content: "\e6ce";
+        }
+    }
+
+    &.interac-debit {
+        &:before {
+            content: "\e6bc";
+        }
+    }
+
+    &.agrinvest-account {
+        &:before {
+            content: "\e6a9";
+        }
+    }
+
+    &.business-current-account {
+        &:before {
+            content: "\e6aa";
+        }
+    }
+
+    &.business-premium {
+        &:before {
+            content: "\e6ab";
+        }
+    }
+
+    &.car-rental {
+        &:before {
+            content: "\e6ac";
+        }
+    }
+
+    &.car-trips {
+        &:before {
+            content: "\e6ad";
+        }
+    }
+
+    &.community-account {
+        &:before {
+            content: "\e6ae";
+        }
+    }
+
+    &.compare {
+        &:before {
+            content: "\e6af";
+        }
+    }
+
+    &.cross-border-shopping {
+        &:before {
+            content: "\e6b0";
+        }
+    }
+
+    &.female-advisor {
+        &:before {
+            content: "\e6b1";
+        }
+    }
+
+    &.find-plan {
+        &:before {
+            content: "\e6b2";
+        }
+    }
+
+    &.giftcard {
+        &:before {
+            content: "\e6b3";
+        }
+    }
+
+    &.help-choose {
+        &:before {
+            content: "\e6b4";
+        }
+    }
+
+    &.merchandise {
+        &:before {
+            content: "\e6b5";
+        }
+    }
+
+    &.mobile-billpay {
+        &:before {
+            content: "\e6b6";
+        }
+    }
+
+    &.not-collecting {
+        &:before {
+            content: "\e6b7";
+        }
+    }
+
+    &.shopping-cart-am {
+        &:before {
+            content: "\e6b8";
+        }
+    }
+
+    &.small-business-plan {
+        &:before {
+            content: "\e6b9";
+        }
+    }
+
+    &.still-cannot-find {
+        &:before {
+            content: "\e6ba";
+        }
+    }
+
+    &.value-assist-plan {
+        &:before {
+            content: "\e6bb";
+        }
+    }
+
+    &.double-chevron-down {
+        &:before {
+            content: "\e6a4";
+        }
+    }
+
+    &.double-chevron-left {
+        &:before {
+            content: "\e6a5";
+        }
+    }
+
+    &.double-chevron-right {
+        &:before {
+            content: "\e6a6";
+        }
+    }
+
+    &.double-chevron-up {
+        &:before {
+            content: "\e6a7";
+        }
+    }
+
+    &.x-to-close {
+        &:before {
+            content: "\e6a8";
+        }
+    }
+
+    &.warning-tax {
+        &:before {
+            content: "\e6a3";
+        }
+    }
+
+    &.file-table {
+        &:before {
+            content: "\e69b";
+        }
+    }
+
+    &.info-i {
+        &:before {
+            content: "\e69d";
+        }
+    }
+
+    &.magnifying-glass-dollar {
+        &:before {
+            content: "\e69e";
+        }
+    }
+
+    &.speech-bubble-graph {
+        &:before {
+            content: "\e69f";
+        }
+    }
+
+    &.tools {
+        &:before {
+            content: "\e6a0";
+        }
+    }
+
+    &.warning-info {
+        &:before {
+            content: "\e6a1";
+        }
+    }
+
+    &.warning-money {
+        &:before {
+            content: "\e6a2";
+        }
+    }
+
+    &.googleplus {
+        &:before {
+            content: "\e69a";
+        }
+    }
+
+    &.googleplus-filled {
+        &:before {
+            content: "\e69c";
+        }
+    }
+
+    &.compare-credit-cards {
+        &:before {
+            content: "\e695";
+        }
+    }
+
+    &.credit-cards-funnel {
+        &:before {
+            content: "\e696";
+        }
+    }
+
+    &.trophy-calculator {
+        &:before {
+            content: "\e697";
+        }
+    }
+
+    &.share-filled {
+        &:before {
+            content: "\e698";
+        }
+    }
+
+    &.share {
+        &:before {
+            content: "\e699";
+        }
+    }
+
+    &.calculator-affordability {
+        &:before {
+            content: "\e693";
+        }
+    }
+
+    &.calculator-mortgage {
+        &:before {
+            content: "\e694";
+        }
+    }
+
+    &.credit-card-chip {
+        &:before {
+            content: "\e692";
+        }
+    }
+
+    &.first-time-homebuyer {
+        &:before {
+            content: "\e691";
+        }
+    }
+
+    &.airplane {
+        &:before {
+            content: "\e600";
+        }
+    }
+
+    &.alert {
+        &:before {
+            content: "\e601";
+        }
+    }
+
+    &.auto-checking {
+        &:before {
+            content: "\e602";
+        }
+    }
+
+    &.auto-envelope {
+        &:before {
+            content: "\e603";
+        }
+    }
+
+    &.baby {
+        &:before {
+            content: "\e604";
+        }
+    }
+
+    &.banking {
+        &:before {
+            content: "\e605";
+        }
+    }
+
+    &.book {
+        &:before {
+            content: "\e606";
+        }
+    }
+
+    &.building {
+        &:before {
+            content: "\e607";
+        }
+    }
+
+    &.building-executive {
+        &:before {
+            content: "\e608";
+        }
+    }
+
+    &.calculator {
+        &:before {
+            content: "\e609";
+        }
+    }
+
+    &.calendar-check {
+        &:before {
+            content: "\e60a";
+        }
+    }
+
+    &.checkings {
+        &:before {
+            content: "\e60b";
+        }
+    }
+
+    &.checkmark {
+        &:before {
+            content: "\e60c";
+        }
+    }
+
+    &.chevron-down {
+        &:before {
+            content: "\e60d";
+        }
+    }
+
+    &.chevron-left {
+        &:before {
+            content: "\e60e";
+        }
+    }
+
+    &.chevron-right {
+        &:before {
+            content: "\e60f";
+        }
+    }
+
+    &.chevron-up {
+        &:before {
+            content: "\e610";
+        }
+    }
+
+    &.circle-cycle {
+        &:before {
+            content: "\e611";
+        }
+    }
+
+    &.clock {
+        &:before {
+            content: "\e612";
+        }
+    }
+
+    &.credit-card {
+        &:before {
+            content: "\e613";
+        }
+    }
+
+    &.credit-card-motion {
+        &:before {
+            content: "\e614";
+        }
+    }
+
+    &.credit-card-reader {
+        &:before {
+            content: "\e615";
+        }
+    }
+
+    &.crown {
+        &:before {
+            content: "\e616";
+        }
+    }
+
+    &.cycle {
+        &:before {
+            content: "\e617";
+        }
+    }
+
+    &.dollar-bills {
+        &:before {
+            content: "\e618";
+        }
+    }
+
+    &.dollar-cycle {
+        &:before {
+            content: "\e619";
+        }
+    }
+
+    &.dollar-cycle-single {
+        &:before {
+            content: "\e61a";
+        }
+    }
+
+    &.dollar-down {
+        &:before {
+            content: "\e61b";
+        }
+    }
+
+    &.download {
+        &:before {
+            content: "\e61c";
+        }
+    }
+
+    &.envelope {
+        &:before {
+            content: "\e61d";
+        }
+    }
+
+    &.envelope-at {
+        &:before {
+            content: "\e61e";
+        }
+    }
+
+    &.facebook {
+        &:before {
+            content: "\e61f";
+        }
+    }
+
+    &.facebook-filled {
+        &:before {
+            content: "\e620";
+        }
+    }
+
+    &.fax {
+        &:before {
+            content: "\e621";
+        }
+    }
+
+    &.foreign-currency {
+        &:before {
+            content: "\e622";
+        }
+    }
+
+    &.game-controller {
+        &:before {
+            content: "\e623";
+        }
+    }
+
+    &.globe {
+        &:before {
+            content: "\e624";
+        }
+    }
+
+    &.globe-hand {
+        &:before {
+            content: "\e625";
+        }
+    }
+
+    &.graduation-hat {
+        &:before {
+            content: "\e626";
+        }
+    }
+
+    &.graph {
+        &:before {
+            content: "\e627";
+        }
+    }
+
+    &.group {
+        &:before {
+            content: "\e628";
+        }
+    }
+
+    &.group-tie {
+        &:before {
+            content: "\e629";
+        }
+    }
+
+    &.growth-trend {
+        &:before {
+            content: "\e62a";
+        }
+    }
+
+    &.handshake {
+        &:before {
+            content: "\e62b";
+        }
+    }
+
+    &.hockey-stick {
+        &:before {
+            content: "\e62c";
+        }
+    }
+
+    &.house {
+        &:before {
+            content: "\e62d";
+        }
+    }
+
+    &.individual {
+        &:before {
+            content: "\e62e";
+        }
+    }
+
+    &.individual-hair {
+        &:before {
+            content: "\e62f";
+        }
+    }
+
+    &.individual-joint {
+        &:before {
+            content: "\e630";
+        }
+    }
+
+    &.international {
+        &:before {
+            content: "\e631";
+        }
+    }
+
+    &.international-hand {
+        &:before {
+            content: "\e632";
+        }
+    }
+
+    &.internet-document {
+        &:before {
+            content: "\e633";
+        }
+    }
+
+    &.laptop {
+        &:before {
+            content: "\e634";
+        }
+    }
+
+    &.laptop-clock {
+        &:before {
+            content: "\e635";
+        }
+    }
+
+    &.laptop-money {
+        &:before {
+            content: "\e636";
+        }
+    }
+
+    &.laptop-trend {
+        &:before {
+            content: "\e637";
+        }
+    }
+
+    &.leaf {
+        &:before {
+            content: "\e638";
+        }
+    }
+
+    &.lending-money {
+        &:before {
+            content: "\e639";
+        }
+    }
+
+    &.light-bulb {
+        &:before {
+            content: "\e63a";
+        }
+    }
+
+    &.linkedin {
+        &:before {
+            content: "\e63b";
+        }
+    }
+
+    &.linkedin-filled {
+        &:before {
+            content: "\e63c";
+        }
+    }
+
+    &.list-checkmark {
+        &:before {
+            content: "\e63d";
+        }
+    }
+
+    &.lock {
+        &:before {
+            content: "\e63e";
+        }
+    }
+
+    &.long-list {
+        &:before {
+            content: "\e63f";
+        }
+    }
+
+    &.magnifying-glass {
+        &:before {
+            content: "\e640";
+        }
+    }
+
+    &.mail {
+        &:before {
+            content: "\e641";
+        }
+    }
+
+    &.minus {
+        &:before {
+            content: "\e642";
+        }
+    }
+
+    &.mobile-phone {
+        &:before {
+            content: "\e643";
+        }
+    }
+
+    &.money {
+        &:before {
+            content: "\e644";
+        }
+    }
+
+    &.monitor-dollar {
+        &:before {
+            content: "\e645";
+        }
+    }
+
+    &.multiple-cards {
+        &:before {
+            content: "\e646";
+        }
+    }
+
+    &.no-fees {
+        &:before {
+            content: "\e647";
+        }
+    }
+
+    &.number-1 {
+        &:before {
+            content: "\e649";
+        }
+    }
+
+    &.number-2 {
+        &:before {
+            content: "\e64a";
+        }
+    }
+
+    &.number-3 {
+        &:before {
+            content: "\e64b";
+        }
+    }
+
+    &.number-4 {
+        &:before {
+            content: "\e64c";
+        }
+    }
+
+    &.number-5 {
+        &:before {
+            content: "\e64d";
+        }
+    }
+
+    &.number-6 {
+        &:before {
+            content: "\e64e";
+        }
+    }
+
+    &.number-7 {
+        &:before {
+            content: "\e64f";
+        }
+    }
+
+    &.number-8 {
+        &:before {
+            content: "\e650";
+        }
+    }
+
+    &.number-9 {
+        &:before {
+            content: "\e651";
+        }
+    }
+
+    &.number-10 {
+        &:before {
+            content: "\e652";
+        }
+    }
+
+    &.number-11 {
+        &:before {
+            content: "\e653";
+        }
+    }
+
+    &.number-12 {
+        &:before {
+            content: "\e654";
+        }
+    }
+
+    &.number-13 {
+        &:before {
+            content: "\e655";
+        }
+    }
+
+    &.number-14 {
+        &:before {
+            content: "\e656";
+        }
+    }
+
+    &.number-15 {
+        &:before {
+            content: "\e657";
+        }
+    }
+
+    &.number-16 {
+        &:before {
+            content: "\e658";
+        }
+    }
+
+    &.number-17 {
+        &:before {
+            content: "\e659";
+        }
+    }
+
+    &.number-18 {
+        &:before {
+            content: "\e65a";
+        }
+    }
+
+    &.number-19 {
+        &:before {
+            content: "\e65b";
+        }
+    }
+
+    &.number-20 {
+        &:before {
+            content: "\e65c";
+        }
+    }
+
+    &.old-building {
+        &:before {
+            content: "\e65d";
+        }
+    }
+
+    &.one {
+        &:before {
+            content: "\e65e";
+        }
+    }
+
+    &.painting {
+        &:before {
+            content: "\e65f";
+        }
+    }
+
+    &.percent {
+        &:before {
+            content: "\e660";
+        }
+    }
+
+    &.percentage-growth {
+        &:before {
+            content: "\e661";
+        }
+    }
+
+    &.personal-wallet {
+        &:before {
+            content: "\e662";
+        }
+    }
+
+    &.phone {
+        &:before {
+            content: "\e663";
+        }
+    }
+
+    &.pie-graph {
+        &:before {
+            content: "\e664";
+        }
+    }
+
+    &.pin-drop {
+        &:before {
+            content: "\e665";
+        }
+    }
+
+    &.plan {
+        &:before {
+            content: "\e666";
+        }
+    }
+
+    &.plus {
+        &:before {
+            content: "\e667";
+        }
+    }
+
+    &.printer {
+        &:before {
+            content: "\e668";
+        }
+    }
+
+    &.profile {
+        &:before {
+            content: "\e669";
+        }
+    }
+
+    &.profile-tie {
+        &:before {
+            content: "\e66a";
+        }
+    }
+
+    &.rss {
+        &:before {
+            content: "\e66b";
+        }
+    }
+
+    &.rss-filled {
+        &:before {
+            content: "\e66c";
+        }
+    }
+
+    &.safe-vault {
+        &:before {
+            content: "\e66d";
+        }
+    }
+
+    &.scroll-caret {
+        &:before {
+            content: "\e66e";
+        }
+    }
+
+    &.seniors {
+        &:before {
+            content: "\e66f";
+        }
+    }
+
+    &.shield {
+        &:before {
+            content: "\e670";
+        }
+    }
+
+    &.shield-car {
+        &:before {
+            content: "\e671";
+        }
+    }
+
+    &.shield-check {
+        &:before {
+            content: "\e672";
+        }
+    }
+
+    &.shield-money {
+        &:before {
+            content: "\e673";
+        }
+    }
+
+    &.shirt-tie {
+        &:before {
+            content: "\e674";
+        }
+    }
+
+    &.shopping-card-lock {
+        &:before {
+            content: "\e675";
+        }
+    }
+
+    &.speech-bubble {
+        &:before {
+            content: "\e676";
+        }
+    }
+
+    &.stats {
+        &:before {
+            content: "\e677";
+        }
+    }
+
+    &.stethoscope {
+        &:before {
+            content: "\e678";
+        }
+    }
+
+    &.store-front {
+        &:before {
+            content: "\e679";
+        }
+    }
+
+    &.stroller {
+        &:before {
+            content: "\e67a";
+        }
+    }
+
+    &.suitcase {
+        &:before {
+            content: "\e67b";
+        }
+    }
+
+    &.suitcase-cycle {
+        &:before {
+            content: "\e67c";
+        }
+    }
+
+    &.tablet-cast {
+        &:before {
+            content: "\e67d";
+        }
+    }
+
+    &.tablet-dollar {
+        &:before {
+            content: "\e67e";
+        }
+    }
+
+    &.tablet-play {
+        &:before {
+            content: "\e67f";
+        }
+    }
+
+    &.tablet-stats {
+        &:before {
+            content: "\e680";
+        }
+    }
+
+    &.tablet-trend {
+        &:before {
+            content: "\e681";
+        }
+    }
+
+    &.thumbs-up {
+        &:before {
+            content: "\e682";
+        }
+    }
+
+    &.times-two {
+        &:before {
+            content: "\e683";
+        }
+    }
+
+    &.trend-magnifying-glass {
+        &:before {
+            content: "\e684";
+        }
+    }
+
+    &.trophy {
+        &:before {
+            content: "\e685";
+        }
+    }
+
+    &.twenty-five-percent {
+        &:before {
+            content: "\e686";
+        }
+    }
+
+    &.twitter {
+        &:before {
+            content: "\e688";
+        }
+    }
+
+    &.twitter-filled {
+        &:before {
+            content: "\e689";
+        }
+    }
+
+    &.two-directions {
+        &:before {
+            content: "\e68a";
+        }
+    }
+
+    &.wallet {
+        &:before {
+            content: "\e68b";
+        }
+    }
+
+    &.youtube {
+        &:before {
+            content: "\e68c";
+        }
+    }
+
+    &.youtube-filled {
+        &:before {
+            content: "\e68d";
+        }
+    }
+
+    &.youtube-play {
+        &:before {
+            content: "\e68e";
+        }
+    }
+
+    &.zero-dollars {
+        &:before {
+            content: "\e68f";
+        }
+    }
+
+
+}
+
+
+.action-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+
+    &:before {
+        color: $bmo-blue;
+        line-height: 24px;
+        font-family: $font-icon2;
+        font-size: 23px;
+        font-weight: normal;
+        font-style: normal;
+        font-variant: normal;
+        text-align: center;
+        text-transform: none;
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow: hidden;
+        vertical-align: text-bottom;
+    }
+
+    &.upload:before {
+        content: "\e901";
+    }
+
+    &.bin:before {
+        content: "\e900";
+    }
+
+    &.edit:before {
+        content: "\e908";
+    }
+
+}
+
+//******************************
+//  .large BREAKPOINT
+//******************************
+@include breakpoint(tablet) {
+    .icon {
+        &.large {
+            width: 60px;
+            height: 60px;
+            line-height: 40px;
+
+            &:before {
+                line-height: 40px;
+                font-size: 39px;
+                padding: 3px;
+            }
+
+            &.stroke {
+                padding: 8px;
+                border-width: 2px;
+                @include border-radius(40px);
+            }
+        }
+    }
+}
+
+html[lang="fr"] {
+    .icon {
+        &.no-fees {
+            &:before {
+                content: "\e648";
+            }
+        }
+
+        &.twenty-five-percent {
+            &:before {
+                content: "\e687";
+            }
+        }
+
+        &.zero-dollars {
+            &:before {
+                content: "\e690";
+            }
+        }
+    }
+}
+
+//**********************
+//  chevron
+//**********************
+
+.chevron {
+    display: inline-block;
+    position: relative;
+    padding: 0 21px 0 0;
+    line-height: 1em;
+    font-family: $font-medium;
+
+    &:before {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        margin: -8px 0 0;
+        line-height: 16px;
+        color: $white;
+        font-family: $font-icon;
+        font-size: 14px;
+        text-align: center;
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow: hidden;
+    }
+
+    &.disabled {
+        &:before {
+            color: #414141;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            padding: 0 21px 1px 0;
+            border-bottom: 0;
+        }
+    }
+
+    &.reverse {
+        padding: 0 0 0 21px;
+
+        &:before {
+            right: auto;
+            left: 0;
+        }
+    }
+
+    &.down {
+        &:before {
+            content: "\e60d";
+        }
+    }
+
+    &.down {
+        &:before {
+            content: "\e60d";
+        }
+    }
+
+    &.up {
+        &:before {
+            content: "\e610";
+        }
+    }
+
+    &.left {
+        &:before {
+            content: "\e60e";
+        }
+    }
+
+    &.right {
+        &:before {
+            content: "\e60f";
+        }
+    }
+
+    &.scroll {
+        &:before {
+            content: "\e66e";
+        }
+    }
+}
+
+//******************************
+// chevron BREAKPOINT
+//******************************
+
+@include breakpoint(tablet) {
+    .chevron[href^="tel"] {
+        &:before {
+            color: $bmo-dark-grey;
+        }
+
+        &:hover,
+        &:focus,
+        &.active {
+            padding: 0 21px 1px 0;
+            border-bottom: 0;
+        }
+    }
+}
+
+//*********************
+//   stroke
+//*********************
+
+.stroke {
+    border: 2px solid $white;
+    color: $white;
+    @include border-radius(10px);
+    margin: 0;
+}

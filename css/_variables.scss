@@ -1,0 +1,173 @@
+//*********************
+//		COLOR
+//*********************
+$white: #fff;
+$black: #000;
+$yellow: #ff0;
+$bmo-positive-green: #007d00;
+$bmo-negative-red:#d40c13;
+$bmo-blue: #0079c1;
+$bmo-blue-selected: #66a6ca;
+$bmo-dark-blue: #004a7c;
+$bmo-border-grey: #c4c4c4;
+$bmo-light-grey: #e6e6e6;
+$bmo-med-grey: #585858;
+$bmo-dark-grey: #414141;
+$bmo-grey-bg: #f7f7f7;
+$bmo-progress-grey: #e0e0e0;
+$bmo-green: #52a423;
+$bmo-red: #ed1c24;
+$bmo-login-background: rgba(9, 30, 46, .95);
+$bmo-login-total-amount-background: #0069a4;
+$bmo-pending-orange: #da7901;
+$bmo-error-msg-background: #fdf6f8;
+$bmo-warning-msg-background: #fffdbf;
+$bmo-warning-msg-text: #2f220f;
+$bmo-success-green-background: #e5f1e5;
+$bmo-success-green-color: #007d00;
+$bmo-checkbox-radio-btn-color: #06486C;
+$bmo-readonly-color: #f7f7f7;
+$bmo-input-border: #ebebeb;
+$bmo-no-statements-background: #e5ecf1;
+$bmo-subscriber-green: #00B48D;
+$bmo-subscriber-orange: #F7941D;
+
+//*********************
+//		fonts
+//*********************
+@font-face {
+  font-family: Dax-Light;
+  src: url("fonts/Dax-Light/dax-light-webfont.eot");
+  src: url("fonts/Dax-Light/dax-light-webfont.eot?#iefix") format("embedded-opentype"),
+  url("fonts/Dax-Light/dax-light-webfont.woff") format("woff"),
+  url("fonts/Dax-Light/dax-light-webfont.woff2") format("woff2"),
+  url("fonts/Dax-Light/dax-light-webfont.ttf") format("truetype"),
+  url("fonts/Dax-Light/dax-light-webfont.svg#daxlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Dax-Regular;
+  src: url("fonts/Dax-Regular/dax-regular-webfont.eot");
+  src: url("fonts/Dax-Regular/dax-regular-webfont.eot?#iefix") format("embedded-opentype"),
+  url("fonts/Dax-Regular/dax-regular-webfont.woff") format("woff"),
+  url("fonts/Dax-Regular/dax-regular-webfont.woff2") format("woff2"),
+  url("fonts/Dax-Regular/dax-regular-webfont.ttf") format("truetype"),
+  url("fonts/Dax-Regular/dax-regular-webfont.svg#daxregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Dax-Medium;
+  src: url("fonts/Dax-Medium/dax-medium-webfont.eot");
+  src: url("fonts/Dax-Medium/dax-medium-webfont.eot?#iefix") format("embedded-opentype"),
+  url("fonts/Dax-Medium/dax-medium-webfont.woff") format("woff"),
+  url("fonts/Dax-Medium/dax-medium-webfont.woff2") format("woff2"),
+  url("fonts/Dax-Medium/dax-medium-webfont.ttf") format("truetype"),
+  url("fonts/Dax-Medium/dax-medium-webfont.svg#daxmedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Dax-Bold;
+  src: url("fonts/Dax-Bold/dax-bold-webfont.eot");
+  src: url("fonts/Dax-Bold/dax-bold-webfont.eot?#iefix") format("embedded-opentype"),
+  url("fonts/Dax-Bold/dax-bold-webfont.woff") format("woff"),
+  url("fonts/Dax-Bold/dax-bold-webfont.woff2") format("woff2"),
+  url("fonts/Dax-Bold/dax-bold-webfont.ttf") format("truetype"),
+  url("fonts/Dax-Bold/dax-bold-webfont.svg#daxbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Glyphicons Halflings;
+}
+
+@font-face {
+  font-family: bmo-icon;
+  src:url("fonts/bmo-icons/bmo-icon.eot");
+  src:url("fonts/bmo-icons/bmo-icon.eot?#iefix") format("embedded-opentype"),
+  url("fonts/bmo-icons/bmo-icon.woff") format("woff"),
+  url("fonts/Dax-Bold/dax-bold-webfont.woff2") format("woff2"),
+  url("fonts/bmo-icons/bmo-icon.ttf") format("truetype"),
+  url("fonts/bmo-icons/bmo-icon.svg#bmo-icon") format("svg");
+  font-weight:normal;
+  font-style:normal;
+}
+
+@font-face {
+    font-family: bmo-icon2;
+    src:  url('fonts/bmo-icons2/PWOB-Additional-Iconography-201.eot?887env');
+    src:  url('fonts/bmo-icons2/PWOB-Additional-Iconography-201.eot?887env#iefix') format('embedded-opentype'),
+    url('fonts/bmo-icons2/PWOB-Additional-Iconography-201.ttf?887env') format('truetype'),
+    url('fonts/bmo-icons2/PWOB-Additional-Iconography-201.woff?887env') format('woff'),
+    url('fonts/bmo-icons2/PWOB-Additional-Iconography-201.svg?887env#PWOB-Additional-Iconography-201') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-light: "Dax-Light";
+$font-regular: "Dax-Regular";
+$font-medium: "Dax-Medium";
+$font-bold: "Dax-Bold";
+$font-glyph: "Glyphicons Halflings";
+$font-icon: "bmo-icon";
+$font-icon2: "bmo-icon2";
+
+//Dimensions
+$footer-height: 40px;
+$footer-icon-size: 30px;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+
+$spacer:                     1rem !default;
+$spacer-x:                   $spacer !default;
+$spacer-y:                   $spacer !default;
+$spacers: (
+  0: (
+    x:   0,
+    y:   0
+  ),
+  1: (
+    x:   $spacer-x,
+    y:   $spacer-y
+  ),
+  2: (
+    x:   ($spacer-x * 1.5),
+    y:   ($spacer-y * 1.5)
+  ),
+  3: (
+    x:   ($spacer-x * 3),
+    y:   ($spacer-y * 3)
+  )
+) !default;
+$border-width:               1px !default;
+$border-radius:          .25rem !default;
+// Cards
+$card-spacer-x:            1.25rem !default;
+$card-spacer-y:            .75rem !default;
+$card-border-width:        1px !default;
+$card-border-radius:       $border-radius !default;
+$card-border-color:        #e5e5e5 !default;
+$card-border-radius-inner: $card-border-radius !default;
+$card-cap-bg:              #f5f5f5 !default;
+$card-bg:                  #fff !default;
+
+$card-link-hover-color:    #fff !default;
+
+$enable-flex:               true !default;
+$enable-rounded:            true !default;
+$enable-shadows:            false !default;
+$enable-gradients:          false !default;
+$enable-transitions:        false !default;
+$enable-hover-media-query:  false !default;
+$enable-grid-classes:       true !default;
+
+$timing-dropdown-slide: 0.3;
