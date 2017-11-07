@@ -3,7 +3,6 @@
 <!-- Designed and developed by Hilo Inc. for BMO -->
 <!-- October  2017 -->
 <!-- Mark Bradley -->
-
 <!-- BMO Nimbus LP   170px 135px -->
 <!DOCTYPE html>
 <html lang="en">
@@ -16,20 +15,17 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap-dialog.css" type="text/css">
-
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" href="css/themes/default/style.min.css" /> 
+    <link rel="stylesheet" href="css/themes/default/style.min.css" />
     <link rel="stylesheet" href="css/toggles-full.css" />
     <link rel="stylesheet" href="css/toggles.css" />
-    <link rel="stylesheet" href="css/themes/toggles-modern.css" /> 
+    <link rel="stylesheet" href="css/themes/toggles-modern.css" />
     <link rel="stylesheet" href="css/nouislider.min.css" />
     <link rel="stylesheet" href="css/nouislider.pips.css" />
     <link rel="stylesheet" href="css/nouislider.tooltips.css" />
 
-   
     <script type="text/javascript" language="javascript" src="default.js"></script>
     <script type="text/javascript" language="javascript" src="config.js"></script>
-
     <script type="text/javascript" language="javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" language="javascript" src="js/sliiide.min.js"></script>
     <script type="text/javascript" language="javascript" src="js/jstree.js"></script>
@@ -41,10 +37,7 @@
     <script type="text/javascript" language="javascript" src="js/nouislider.min.js"></script>
     <script type="text/javascript" language="javascript" src="js/papaparse.min.js"></script>
     <script type="text/javascript" language="javascript" src="js/index.js"></script>
-
-
-
-<!-- 'data' : [
+    <!-- 'data' : [
                 { "text" : "Customer Facing Processes", "icon":"column-wide", "children" : [ 
                     { "text" : "Deposits", "icon":""},
                     { "text" : "Lending", "icon":""},
@@ -79,32 +72,27 @@
         }, -->
 </head>
 
-
-
-
-
 <body>
-
     <div id="screenshot">
-        <div class="closeScreenshot"><button type="button" class="btn-default btn-xs" href="#"><div class="sprite70"></div></button></div>
+        <div class="closeScreenshot">
+            <button type="button" class="btn-default btn-xs" href="#">
+                <div class="sprite70"></div>
+            </button>
+        </div>
     </div>
-
-
     <div id="menu" class="menu">
-        <div class="exit">            
+        <div class="exit">
             <div type="button" class="btn-default btn-xs" href="#">
-               <div class="sprite70"></div>
+                <div class="sprite70"></div>
             </div>
         </div>
-
         <h4 class="accordion-toggle">Layout</h4>
         <div class="accordion-content default">
             <div id="menuTree"></div>
         </div>
-
         <h4 class="accordion-toggle">Options</h4>
         <div class="accordion-content default">
-<!--             <h4>Edit buttons</h4>
+            <!--             <h4>Edit buttons</h4>
             <div class="toggle-modern">
             <div id="editButtons" rel="editButtons" class="toggle" style="height: 22px; width: 70px;">
                 <div class="toggle-slide">
@@ -142,7 +130,6 @@
                     </div>
                 </div>
             </div> -->
-
             <h4>Links</h4>
             <div class="toggle-modern">
                 <div id="linkToggleButton" rel="linkToggleButton" class="linkToggle" style="height: 22px; width: 70px;">
@@ -155,11 +142,9 @@
                     </div>
                 </div>
             </div>
-
             <h4>Zoom</h4>
-            <div id="slider-connect">   </div>
+            <div id="slider-connect"> </div>
         </div>
-
         <h4 class="accordion-toggle">Tools</h4>
         <div class="accordion-content default">
             <button type="button" class="saveImage btn-default btn-lg">
@@ -172,137 +157,65 @@
                 <div class="BMO-label">load</div>
                 <!-- <input id="fileUpload" type="file" style="display:hidden;"> -->
             </button>
-<!--             <button type="button" class="render btn-default btn-lg">
+            <!--             <button type="button" class="render btn-default btn-lg">
                 <div class="BMO-label">redraw</div>
             </button> -->
             <button type="button" class="undo btn-default btn-lg">
                 <div class="BMO-label">undo</div>
             </button>
             <a href=".\json-gh-pages\index.html" target="_blank">
-            <button type="button" class="JSONtoCSV btn-default btn-lg">
-                <div class="BMO-label">Convert to CSV</div>
-            </button>
+                <button type="button" class="JSONtoCSV btn-default btn-lg">
+                    <div class="BMO-label">Convert to CSV</div>
+                </button>
             </a>
             <button type="button" class="saveDefaultJSON btn-default btn-lg">
                 <div class="BMO-label">save default layout</div>
             </button>
-            <br><br>
+            <br>
+            <br>
             <span><b> Load layout json file:</b></span>
             <input type='file' accept='text/plain' onchange='openFile(event)'>
-            <br><br>
-                <form class="form-inline">
-                    <div class="form-group">
-                      <label for="files">Upload a CSV formatted file:</label>
-                      <input type="file" id="files"  class="form-control" accept=".csv" required />
-                    </div>
-                    <div class="form-group">
-                     <button type="submit" id="submit-file" class="btn btn-primary">Upload File</button>
-                     </div>
-                </form>
-            <br/><br/> 
+            <br>
+            <br>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="files">Upload a CSV formatted file:</label>
+                    <input type="file" id="files" class="form-control" accept=".csv" required />
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submit-file" class="btn btn-primary">Upload File</button>
+                </div>
+            </form>
+            <br/>
+            <br/>
             <div id='output'>...</div>
         </div>
-
         <h4 class="accordion-toggle">Screenshot(s)</h4>
         <div id="menu-screenshots" class="accordion-content default">
-
         </div>
-
-<!--         <h4 class="accordion-toggle">Styles</h4>
-        <div class="accordion-content default"> -->
-
-        </div>
-
-
     </div>
-
-
+    </div>
     <div id="landingPage">
         <div class="BMO-header">
             <div id="toggle-menu" class="logo " alt=""></div>
             <div class="top-nav">
                 <div class="home-btn" alt=""></div>
-<!--                 <div class="back-btn" alt=""></div>
+                <!--                 <div class="back-btn" alt=""></div>
                 <div class="top-btn" alt=""></div> -->
             </div>
         </div>
         <div id="breadcrumb"></div>
-
         <div id="container" class="clearfix">
-    <!--         <div class="blue-divider"></div> -->
+            <!--         <div class="blue-divider"></div> -->
             <div id="parsed_csv_list"></div>
             <div id="top" class="grid column-border">
-            <!-- content rendered here -->
+                <!-- content rendered here -->
             </div>
         </div>
         <div id="all-icons">
         </div>
     </div>
 </body>
-<script type="text/javascript">
-//missing font icons
-//"x3","planshare","transfer","gear","touchscreen",
 
-
-</script>
 <script type="text/javascript" src="js/html2canvas.js"></script>
-<script type="text/javascript">
-    function saveImage(){
-        menu.deactivate();
-
-        $("#menu").hide();
-        $(".nav").hide();
-
-        //$("body").addClass("screenshotWidth");
-
-        html2canvas($("#landingPage")).then(function(canvas) {
-            var ctx = canvas.getContext('2d');
-            ctx.font = "48px arial";
-            //document.body.appendChild(canvas);
-            // $("#screenshot").prepend(canvas);
-            // var copyCanvas =  $("#screenshot").find("canvas").clone();
-            $("#menu-screenshots").prepend(canvas);
-            $("#menu-screenshots").find("canvas").eq(4).remove();
-            // $("#screenshot").show();
-            // $("#container").hide();
-
-            setTimeout(openMenu, 1000);
-
-            // $("top").hide();
-        });
-
-
-        // html2canvas($('#container'), {
-        //   onrendered: function (canvas) {
-        //       document.body.appendChild(canvas);
-        //   }
-        // });
-    }
-
-    function openMenu() {
-            console.log("open menu");
-            $(".nav").show();
-            $("#menu").show();
-            menu.activate();
-    }
-
-
-    var connectSlider = document.getElementById('slider-connect');
-
-    noUiSlider.create(connectSlider, {
-        start: 0,
-        connect: 'lower',
-        step: 10,
-        range: {
-          'min': 100,
-          'max': 200
-        }
-    });
-
-    connectSlider.noUiSlider.on('update', function( values, handle ) {
-           $("#container").css("zoom", values[handle]+"%");
-    });
-
-</script>
-
 </html>
