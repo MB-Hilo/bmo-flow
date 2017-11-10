@@ -773,32 +773,6 @@
 
         $(".saveImage").click(function() {
             saveImage();
-
-
-            //$('#menuTree').jstree('select_node', 'node3');
-
-            ////console.log("get node "+$('#menuTree').get_node('#node3'));
-
-
-            //$('#menuTree').jstree(true).set_icon(nodes, "sprite20");
-
-            //$('#menuTree').jstree(true).delete_node('node3');
-            //$('#menuTree').jstree('set_icon','#node2','sprite20');
-
-            //var treejson = JSON.stringify($('#menuTree').data().jstree.get_json());
-
-            // var leaves = traverse(treejson).reduce(function (acc, x) {
-            //     if (this.isLeaf) acc.push(x);
-            //     return acc;
-            // }, []);
-
-            // traverse(treejson, function (key, value, trail) {
-            //   //console.log(arguments)
-            // });
-
-
-
-
         });
 
         //return an array of objects according to key, value, or key and value matching
@@ -998,10 +972,6 @@
                     });
                     return;
                 }
-
-
-
-
 
                 // var setClass = $(this).children('div').attr('class');
                 // nodes = $('#menuTree').jstree(true);
@@ -1329,7 +1299,7 @@
             var normalized = new Node('root', 'root', 'icon');
 
             data.forEach(function(value) {
-                var temp = value.path.split(' / ');
+                var temp = value.path.split('\\');
 
                 if (temp[temp.length - 1] == undefined || temp[temp.length - 1] == "undefined" || temp[temp.length - 1] == "") {
                     temp.pop();
@@ -1371,28 +1341,46 @@
 
             var newArray = [];
 
-            for (i = 0; i < data.length; i++) {
+            for (i = 1; i < data.length; i++) {
                 //table+= "<tr>";
                 var row = data[i];
                 var cells = row.join(",").split(",");
 
-                if (cells[4] !== "" && cells[4] !== undefined) {
+                if (cells[5] !== "" && cells[5] !== undefined) {
                     console.log("cell 4", cells[4]);
                 }
 
-                if (cells[5] == "" || cells[5] == undefined || cells[5] == "undefined") {
-                    cells[5] = "#";
+                if (cells[0] == "" || cells[0] == undefined || cells[0] == "undefined") {
+                    cells[0] = "#";
                 }
 
-                if (cells[4] !== "" && cells[4] !== undefined) {
-                    newArray.push({ path: cells[0] + " / " + cells[1] + " / " + cells[4], url: cells[5] });
-                } else {
-                    newArray.push({ path: cells[0] + " / " + cells[1], url: cells[5] });
+                if (cells[5] !== "" && cells[5] !== undefined) {
+                    newArray.push({ path: cells[1] + "\\" + cells[5], url: cells[0] });
+                } else if(cells[1] !== "" && cells[1] !== undefined) {
+                    newArray.push({ path: cells[1], url: cells[0] });
                 }
 
-                if (typeof cells[4] == "string") {
-                    console.log(cells[4]);
+                if (typeof cells[5] == "string") {
+                    console.log(cells[5]);
                 }
+
+                //if (cells[4] !== "" && cells[4] !== undefined) {
+                //    console.log("cell 4", cells[4]);
+                //}
+
+               //if (cells[5] == "" || cells[5] == undefined || cells[5] == "undefined") {
+               //     cells[5] = "#";
+               //}
+
+               // if (cells[4] !== "" && cells[4] !== undefined) {
+                //    newArray.push({ path: cells[0] + " / " + cells[1] + " / " + cells[4], url: cells[5] });
+               // } else {
+                //    newArray.push({ path: cells[0] + " / " + cells[1], url: cells[5] });
+               // }
+
+               // if (typeof cells[4] == "string") {
+               //     console.log(cells[4]);
+               // }
                 // for(j=0;j<cells.length;j++){
                 //     table+= "<td>";
                 //     table+= cells[j];
