@@ -532,12 +532,13 @@
 
         $(document).on("click", ".breadcrumb", function breadcrumbClick() {
 
+            var selectedText = this.text;
             selectedID = this.id;
             columnIndex = this.dataset.col;
 
             var nodes = $('#menuTree').data().jstree.get_json();
 
-            if (selectedID == "root") {
+            if (selectedID == "root" || selectedText == "root") {
                 goHome();
                 return;
             }
@@ -1103,7 +1104,7 @@
                     breadCrumb = [];
                     columns = [];
 
-                    if (data.instance.get_node(data.selected[0]).id == "root") {
+                    if (data.instance.get_node(data.selected[0]).id == "root" || data.instance.get_node(data.selected[0]).text == "root") {
                         goHome();
                         return;
                     }
@@ -1299,7 +1300,7 @@
             var normalized = new Node('root', 'root', 'icon');
 
             data.forEach(function(value) {
-                var temp = value.path.split('\\');
+                var temp = value.path.split(' / ');
 
                 if (temp[temp.length - 1] == undefined || temp[temp.length - 1] == "undefined" || temp[temp.length - 1] == "") {
                     temp.pop();
@@ -1355,9 +1356,9 @@
                 }
 
                 if (cells[5] !== "" && cells[5] !== undefined) {
-                    newArray.push({ path: cells[1] + "\\" + cells[5], url: cells[0] });
-                } else if(cells[1] !== "" && cells[1] !== undefined) {
-                    newArray.push({ path: cells[1], url: cells[0] });
+                    newArray.push({ path: cells[7] + " / " + cells[5], url: cells[0] });
+                } else if(cells[7] !== "" && cells[7] !== undefined) {
+                    newArray.push({ path: cells[7], url: cells[0] });
                 }
 
                 if (typeof cells[5] == "string") {
