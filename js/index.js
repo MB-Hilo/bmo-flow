@@ -1329,7 +1329,7 @@
                 if (obj.hasOwnProperty(property)) {
                     if (typeof obj[property] == "object")
                         iterate(obj[property]);
-                    else if (property == "id") {
+                    else if (property == "id" && obj[property] != "root") {
                         obj[property] = Math.floor(Math.random() * 10000000000000) + "-" + Math.floor(Math.random() * 10000000000000);
                     }
                 }
@@ -1344,8 +1344,12 @@
 
             for (i = 1; i < data.length; i++) {
                 //table+= "<tr>";
+
                 var row = data[i];
-                var cells = row.join(",").split(",");
+                var cells = row.join("|").split("|");
+
+                console.log(row);
+                console.log(cells);
 
                 if (cells[5] !== "" && cells[5] !== undefined) {
                     console.log("cell 4", cells[4]);
