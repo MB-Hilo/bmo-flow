@@ -164,13 +164,7 @@
         });
 
         $('.home-btn').click(function() {
-            rootColumn = [];
-            breadCrumb = [];
-            columns = [];
-            breadcrumbNav = "";
-            $("#breadcrumb").html(breadcrumbNav);
-            renderLayout();
-            columns = [];
+            goHome();
         });
 
         function goHome() {
@@ -606,6 +600,7 @@
         }
 
         function renderLayout(nodeJSON) {
+            console.log(nodeJSON);
             $("#container").removeClass("centerColumn");
             //layoutType = "column";
             if (layoutType === "row") {
@@ -668,7 +663,8 @@
 
             if (treejson.length > 0) {
 
-                treejson = treejson[0].children;
+                treejson = treejson[0];
+                console.log(treejson);
                 // debugger;
                 html = json2html.transform(treejson, transforms.parent);
                 $("#top").html(html);
@@ -1104,10 +1100,10 @@
                     breadCrumb = [];
                     columns = [];
 
-                    if (data.instance.get_node(data.selected[0]).id == "root" || data.instance.get_node(data.selected[0]).text == "root") {
-                        goHome();
-                        return;
-                    }
+                    // if (data.instance.get_node(data.selected[0]).id == "root" || data.instance.get_node(data.selected[0]).text == "root") {
+                    //     goHome();
+                    //     return;
+                    // }
 
                     var nodes = $('#menuTree').data().jstree.get_json();
                     var clickedNodeID = data.instance.get_node(data.selected[0]).id;
@@ -1346,7 +1342,10 @@
                 //table+= "<tr>";
 
                 var row = data[i];
-                var cells = row.join("|").split("|");
+                var cells = row.join(",").split(",");
+
+                //var cells = row.join(",").match(/(".*?"|[^",]+)(?=\s*,|\s*$)/);
+                //cells = cells || [];
 
                 console.log(row);
                 console.log(cells);
@@ -1445,7 +1444,6 @@
 
         initTree();
         nodeEditView();
-
     });
 
 
